@@ -1,0 +1,20 @@
+nav{
+    background-color:#625eeb;
+}
+a.link{
+    color:white;
+}
+.nav-txt{
+    color:white;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color:white;
+}
+
+.navbar-nav>li>a:hover{
+    opacity: 0.5;
+}
+.navbar {
+   margin-bottom: 6px;
+}
