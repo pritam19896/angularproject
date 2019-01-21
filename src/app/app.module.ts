@@ -1,3 +1,4 @@
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
@@ -12,12 +13,15 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 
 import {PanelMenuModule} from 'primeng/panelmenu';
 import { ApplicationformComponent } from './applicationform/applicationform.component';
+import { FormsModule } from '@angular/forms';
+import { LoginformComponent } from './loginform/loginform.component';
 @NgModule({
   declarations: [
     AppComponent,
     MenubarComponent,
     SidebarComponent,
     ApplicationformComponent,
+    LoginformComponent,
     ],
   imports: [
     BrowserModule,
@@ -26,8 +30,8 @@ import { ApplicationformComponent } from './applicationform/applicationform.comp
     BrowserAnimationsModule,
     ButtonModule,
     PanelMenuModule,
-  
-   ],
+    FormsModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

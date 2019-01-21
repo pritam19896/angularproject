@@ -1,13 +1,13 @@
-// import { FormData } from "./applicationform.model";
-import { Component } from "@angular/core";
-import { NgForm } from "@angular/forms";
+import { Component} from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
-  selector: "app-applicationform",
-  templateUrl: "./applicationform.component.html",
-  styleUrls: ["./applicationform.component.css"]
+  selector: 'app-loginform',
+  templateUrl: './loginform.component.html',
+  styleUrls: ['./loginform.component.css']
 })
-export class ApplicationformComponent {
+export class LoginformComponent  {
+
   first_name: string;
   middle_name: string;
   last_name: string;
@@ -29,4 +29,5 @@ export class ApplicationformComponent {
     console.log("email   : " + this.email);
     console.log("password: " + this.password);
   }
+
 }
