@@ -1,0 +1,119 @@
+<!-- <p>hello</p> -->
+<mat-card multi="true">
+  <form
+    action="#"
+    (submit)="onAddPost(postForm)"
+    #postForm="ngForm"
+    multi="true"
+  >
+    <!-- name -->
+    <div>
+      <mat-form-field class="ui-md-12">
+        <input
+          matInput
+          type="text"
+          name="first_name"
+          ngModel
+          required
+          #first_name="ngModel"
+          placeholder="First name"
+        />
+        <mat-error *ngIf="first_name.invalid">Please enter name</mat-error>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field class="ui-md-4">
+        <input
+          matInput
+          type="text"
+          name="middle_name"
+          ngModel
+          required
+          #middle_name="ngModel"
+          placeholder="Middle name"
+        />
+        <mat-error *ngIf="middle_name.invalid">Please enter name</mat-error>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field class="ui-md-4">
+        <input
+          matInput
+          type="text"
+          name="last_name"
+          ngModel
+          required
+          #last_name="ngModel"
+          placeholder="Last name"
+        />
+        <mat-error *ngIf="last_name.invalid">Please enter name</mat-error>
+      </mat-form-field>
+    </div>
+    <!-- email -->
+
+    <mat-form-field>
+      <input
+        matInput
+        type="email"
+        name="email"
+        ngModel
+        required
+        #email="ngModel"
+        placeholder="email"
+      />
+      <mat-error *ngIf="email.invalid">Please enter email</mat-error>
+    </mat-form-field>
+
+    <!-- password -->
+
+    <mat-form-field>
+      <input
+        type="password"
+        name="password"
+        matInput
+        ngModel
+        required
+        #password="ngModel"
+        placeholder="password"
+      />
+      <mat-error *ngIf="password.invalid">Please enter password</mat-error>
+    </mat-form-field>
+
+    <button mat-raised-button type="submit" color="primary">save post</button>
+  </form>
+</mat-card>
+
+
+
+<!-- table -->
+
+ <br>
+
+    <button mat-raised-button type="submit" color="primary" (click)="getdata()">Display</button>
+
+
+
+
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">first_name</th>
+      <th scope="col">middle_name</th>
+      <th scope="col">last_name</th>
+      <th scope="col">email</th>
+      <th scope="col">password</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr  *ngFor="let data of userdata">
+      <!-- <td>{{data}}</td> -->
+      <td>{{data.first_name}}</td>
+      <td>{{data.middle_name}}</td>
+      <td>{{data.last_name}}</td>
+      <td>{{data.email}}</td>
+      <td>{{data.password}}</td>
+    </tr>
+  </tbody>
+</table>

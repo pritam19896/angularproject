@@ -1,13 +1,12 @@
-import { Component} from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { Component } from "@angular/core";
+import { NgForm } from "@angular/forms";
 
 @Component({
-  selector: 'app-loginform',
-  templateUrl: './loginform.component.html',
-  styleUrls: ['./loginform.component.css']
+  selector: "app-loginform",
+  templateUrl: "./loginform.component.html",
+  styleUrls: ["./loginform.component.css"]
 })
-export class LoginformComponent  {
-
+export class LoginformComponent {
   first_name: string;
   middle_name: string;
   last_name: string;
@@ -18,16 +17,7 @@ export class LoginformComponent  {
   // constructor(public posts:FormData) {}
 
   onAddPost(form: NgForm) {
-    console.log(
-      "name    : " +
-        this.first_name +
-        "  " +
-        this.middle_name +
-        "  " +
-        this.last_name
-    );
     console.log("email   : " + this.email);
     console.log("password: " + this.password);
   }
-
 }
