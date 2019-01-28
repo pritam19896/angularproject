@@ -1,6 +1,9 @@
+import { Userdata } from './newuserform/userdata';
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import 'rxjs/add/operator/map';
+import { Observable } from 'rxjs';
+
 @Injectable({
   providedIn: "root"
 })
@@ -17,9 +20,9 @@ export class ServerService {
     // 0 requests made - .subscribe() not called.
   }
 
-  getproducts() {
+  getproducts():Observable<Userdata[]> {
     return this.http
-      .get("http://localhost:7000/test/getuserdata").map(res => res.json() );
+      .get<Userdata[]>("http://localhost:7000/test/getuserdata");
       // .toPromise()
       // .then(res => res.json());
 
